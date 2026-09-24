@@ -52,6 +52,9 @@ textarea{width:100%;height:260px;margin-top:12px;padding:10px;font-size:12px;
   #intro button{width:100%;font-size:20px}
 }
 
+#sendwrap{margin:18px 0 22px;display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+#sendwrap button{font-size:19px;padding:15px 30px}
+#msg{font-size:14px;color:#639922}
 #screen{background:#F6F3EA;border:1px solid #ddd6bd;border-radius:10px;
  padding:15px 20px;margin:20px 0 18px;font-size:16px;line-height:1.5;color:#3d3d3d}
 #screen b{display:block;margin-bottom:5px}
@@ -104,14 +107,14 @@ textarea{width:100%;height:260px;margin-top:12px;padding:10px;font-size:12px;
 </div>
 
 <div id="results" class="hide">
-  <h1>Done &mdash; thank you</h1>
-  <p class="lead" id="sendlead">Your answers have been copied to your clipboard. <b>Paste them into a text or email to Karen</b> and you&rsquo;re done &mdash; it will look like a wall of numbers, which is correct.</p>
+  <h1>Don&rsquo;t go yet!</h1>
+  <p class="lead" id="sendlead">Your answers have been copied to your clipboard. <b>Paste them into a text or email to Karen</b> and you&rsquo;re done.</p>
+  <div id="sendwrap"><button class="go" id="send">Send my answers to Karen</button><span id="msg"></span></div>
   <p class="lead" style="font-size:15px;color:#777">A copy was also saved to your downloads as a backup.</p>
   <div id="table"></div>
   <textarea id="out" readonly></textarea>
   <div class="acts" style="justify-content:flex-start">
-    <button class="go" id="send">Send my answers to Karen</button><button id="copy">Copy instead</button><button id="more">Judge more</button><button id="download">Download a copy</button>
-    <span id="msg" style="font-size:13px;color:#639922;align-self:center"></span>
+    <button id="copy">Copy instead</button><button id="more">Judge more</button><button id="download">Download a copy</button>
   </div>
 </div>
 
@@ -338,8 +341,8 @@ function setupSend(){
   var b=document.getElementById('send'),msg=document.getElementById('msg'),
       lead=document.getElementById('sendlead');
   if(!formCfg()){ b.style.display='none'; return; }
-  if(lead) lead.innerHTML='One button and you are done &mdash; press '+
-    '<b>Send my answers to Karen</b> below. Nothing else is needed.';
+  if(lead) lead.innerHTML='Just hit this button and you are done &mdash; press '+
+    '<b>Send my answers</b> below.';
   b.onclick=function(){
     b.disabled=true; b.textContent='Sending\u2026';
     submitToForm(function(r){
