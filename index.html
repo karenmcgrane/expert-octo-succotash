@@ -52,6 +52,8 @@ textarea{width:100%;height:260px;margin-top:12px;padding:10px;font-size:12px;
   #intro button{width:100%;font-size:20px}
 }
 
+#screen em{font-style:italic}
+#intro p.note{font-size:16px;color:#777}
 #screen{background:#F6F3EA;border:1px solid #ddd6bd;border-radius:10px;
  padding:16px 20px;margin:22px 0 18px;font-size:17px;line-height:1.5;color:#3d3d3d}
 #screen b{display:block;margin-bottom:6px}
@@ -63,21 +65,13 @@ textarea{width:100%;height:260px;margin-top:12px;padding:10px;font-size:12px;
 
 <div id="intro">
 <h1>Which color looks best on Karen?</h1>
-<p class="lead">You will see two photos of Karen at a time, each with her holding a different color fabric up to her chin. You are not being asked which color you personally like better, but which one makes Karen look her best &mdash; whether it makes her look well, or washed out and tired. A color can be gorgeous and still do her no favors, and a dull one can make her look great.</p>
-<p class="lead">Some pairs will be close. <b>Please pick a side anyway.</b> Even a faint lean you cannot justify tells us far more than a tie does.</p>
-<p class="lead">&ldquo;Both&rdquo; and &ldquo;neither&rdquo; are there when you truly need them, and are better than guessing at random &mdash; but they give us much less to work with, so reach for them last.</p>
-<p class="lead">So look at her, not the fabric:</p>
-<ul class="lead">
-<li>Does her skin look clear and even, or does redness and blotchiness show more?</li>
-<li>Does she look rested, or tired &mdash; shadows under the eyes, lines around nose and mouth?</li>
-<li>Do her eyes, brows and mouth stay distinct, or does her face go flat?</li>
-<li>Do you see <em>her</em> first, or do you see the shirt first?</li>
-</ul>
-<p class="lead"><b>One thing that will probably throw you.</b> In some photos she looks yellower, or greyer, or flatter than in others, and the natural reaction is to think &ldquo;that is just bad lighting&rdquo; and mentally correct for it. <b>Please don&rsquo;t.</b> We measured the light in every single frame, and the differences you see in her face do not track it. So when her skin looks sallow or washed out in one photo and not another, that is the garment doing it. That is the whole thing we are trying to find. Judge what you actually see.</p>
-<p class="lead">No expertise needed and there's no right answer &mdash; go on instinct
-and go fast. Stop whenever you like; 62 matchups covers the whole set, and the bar at the top fills up when you get there. You can stop earlier and it still counts &mdash; and if you keep going past it, the tool starts picking the closest matchups itself, which sharpens the result.</p>
+<p class="lead">Two photos at a time &mdash; pick whichever one her <em>face</em> looks better in &mdash; not which color you prefer. Which one makes her look well rather than washed out and tired?</p>
+<p class="lead">Some pairs are close. <b>Pick a side anyway</b> &mdash; a faint lean tells us more than a tie. &ldquo;Both&rdquo; and &ldquo;neither&rdquo; are there when you truly need them &mdash; they just give us less to work with, so reach for them last.</p>
+<div id="screen"><b>Look at her, not the garment.</b><ul><li>Does her skin look clear and even, or does redness show more?</li><li>Does she look rested, or tired &mdash; shadows under the eyes, lines around nose and mouth?</li><li>Do her eyes, brows and mouth stay distinct, or does her face go flat?</li><li>Do you see <em>her</em> first, or the garment first?</li></ul></div>
+<p class="lead"><b>One thing that will throw you.</b> She looks yellower or greyer in some photos and you will want to write it off as bad lighting. Please don&rsquo;t &mdash; we measured the light in every frame and it does not explain it. That is the garment doing it, and it is the whole thing we are looking for.</p>
+<p class="lead note">No expertise needed and there is no right answer. 62 matchups covers the set; stop earlier and it still counts. If it is easy, use a laptop with dark mode and Night Shift off &mdash; and if not, go ahead anyway.</p>
 <p class="lead" style="margin-top:6px"><label>Your name
-<input id="who" placeholder="e.g. Anne" autocomplete="off"
+<input id="who" placeholder="e.g. Karen" autocomplete="off"
  style="font:inherit;font-size:18px;padding:9px 12px;margin-left:8px;
  border:1px solid #cfcfcf;border-radius:8px;width:220px"></label></p>
 <div id="resume" class="hide" style="background:#F6F3EA;border:1px solid #ddd6bd;
@@ -86,7 +80,6 @@ and go fast. Stop whenever you like; 62 matchups covers the whole set, and the b
   <button class="go" id="btnResume" style="margin-top:10px">Pick up where I left off</button>
   <button id="btnFresh" style="margin-top:10px">Start over</button>
 </div>
-<div id="screen"><b>Before you start &mdash; only if it&rsquo;s easy.</b><p>This one is about color, so screens matter a little:</p><ul><li>Use a laptop rather than a phone, if one is handy</li><li>Turn off Night Shift or True Tone if your screen has it &mdash; it tints everything warmer</li><li>Turn off dark mode</li><li>Sit somewhere with ordinary light, not a dark room</li></ul><p class="last">If none of that is convenient, go ahead anyway &mdash; your answers still count.</p></div>
 <button class="go" id="start">Start</button>
 </div>
 
